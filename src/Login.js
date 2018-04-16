@@ -35,6 +35,7 @@ class Login extends Component {
             <div>
                 <input type='email' ref={ref => this.email = ref} />
                 <input type='passwd' ref={ref => this.passwd = ref} />
+                {this.state.error && <p>E-mail e/ou senha inválidos.</p>}
                 <button disabled={this.state.isLogging} onClick={this.handleLogin}>
                     Entrar
                 </button>
