@@ -32,7 +32,7 @@ class Login extends Component {
             <div>
                 <input type='email' ref={ref => this.email = ref} />
                 <input type='passwd' ref={ref => this.passwd = ref} />
-                <button onClick={this.handleLogin}>
+                <button disabled={this.state.isLogging} onClick={this.handleLogin}>
                     Entrar
                 </button>
             </div>
