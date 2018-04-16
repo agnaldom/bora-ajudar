@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
+
 import { auth } from './base'
 
 class Login extends Component {
@@ -17,11 +19,16 @@ class Login extends Component {
         this.handleLogin = this.handleLogin.bind(this)
     }
     handleLogin() {
-        this.seState({ isLogging: true })
+        this.seState({ 
+            isLogging: true,
+            error: false 
+        })
         auth
             .signInWithEmailAndPassword(this.email.value, this.passwd.value)
             .then((user) => {
-                console.log('logged in', user)
+                this.setState({
+                    isLoggeIn: true
+                })
             })
             .catch(error => {
                 this.seState({
@@ -31,6 +38,9 @@ class Login extends Component {
             })
     }
     render(){
+        if (this.state.isLoggedIn) {
+            return <Redirect to='/admin' />
+        }
         return (
             <div>
                 <input type='email' ref={ref => this.email = ref} />
