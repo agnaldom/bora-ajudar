@@ -24,7 +24,10 @@ class Login extends Component {
                 console.log('logged in', user)
             })
             .catch(error => {
-                console.log('error', error)
+                this.seState({
+                    error: true,
+                    isLogging: false
+                })
             })
     }
     render(){
