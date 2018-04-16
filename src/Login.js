@@ -17,6 +17,7 @@ class Login extends Component {
         this.handleLogin = this.handleLogin.bind(this)
     }
     handleLogin() {
+        this.seState({ isLogging: true })
         auth
             .signInWithEmailAndPassword(this.email.value, this.passwd.value)
             .then((user) => {
