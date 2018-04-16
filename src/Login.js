@@ -19,7 +19,7 @@ class Login extends Component {
         this.handleLogin = this.handleLogin.bind(this)
     }
     handleLogin() {
-        this.seState({ 
+        this.setState({ 
             isLogging: true,
             error: false 
         })
@@ -31,7 +31,7 @@ class Login extends Component {
                 })
             })
             .catch(error => {
-                this.seState({
+                this.setState({
                     error: true,
                     isLogging: false
                 })
