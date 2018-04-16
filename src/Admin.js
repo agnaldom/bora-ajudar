@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 
 import { auth } from './base'
+
+const AdminHome = props => <p>Seja bem-vindo!</p>
 
 class Admin extends Component{
     constructor(props) {
@@ -28,7 +30,12 @@ class Admin extends Component{
         if (!this.state.isLoggedIn) {
             return <Redirect to='/login' />
         }
-        return <h1>Admin {JSON.stringify(this.state)}</h1>
+        return(
+            <div>
+                <h1>Painel Administrativo</h1>
+                {/*<Route path='/' component={AdminHome} />*/}
+            </div>
+        )
     }
 }
 
