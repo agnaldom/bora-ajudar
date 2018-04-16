@@ -8,6 +8,8 @@ import Header from './Header'
 import Home from './Home'
 import Footer from './Footer'
 import Sobre from './Sobre'
+import Contato from './Contato'
+import Campanhas from './Campanhas'
 
 
 class App extends Component {
@@ -18,6 +20,8 @@ class App extends Component {
                 <Header />
                 <Route exact path='/' component={Home} />
                 <Route path='/sobre' component={Sobre} />
+                <Route path='/contato' component={Contato} />
+                <Route path='/campanhas' component={Campanhas} />
                 <Footer />
             </div>    
         </Router>
