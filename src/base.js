@@ -2,12 +2,12 @@ import Rebase from 're-base'
 import firebase from 'firebase'
 
 const config = {
-    apiKey: "AIzaSyB2Y7q_Xme3QE6THAkwDKYrLXbaJXBUqzw",
-    authDomain: "bora-ajudar-b7610.firebaseapp.com",
-    databaseURL: "https://bora-ajudar-b7610.firebaseio.com",
-    projectId: "bora-ajudar-b7610",
-    storageBucket: "bora-ajudar-b7610.appspot.com",
-    messagingSenderId: "681219579490"
+    apiKey: "AIzaSyC5IQH0lUkZYwoR9XDcpmtjJGYTggIOUF4",
+    authDomain: "casa-do-idoso.firebaseapp.com",
+    databaseURL: "https://casa-do-idoso.firebaseio.com",
+    projectId: "casa-do-idoso",
+    storageBucket: "casa-do-idoso.appspot.com",
+    messagingSenderId: "444402652253"
 };
 
 const app = firebase.initializeApp(config);
