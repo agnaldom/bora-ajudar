@@ -26,7 +26,7 @@ class App extends Component {
                 <Route path='/contato' component={Contato} />
                 <Route path='/campanhas' component={Campanhas} />
                 <Route path='/admin' component={Admin} />
-                <Route path='/login' component={login}
+                <Route path='/login' component={Login} />
                 <Footer />
             </div>    
         </Router>
