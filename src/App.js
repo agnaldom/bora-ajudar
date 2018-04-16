@@ -10,6 +10,8 @@ import Footer from './Footer'
 import Sobre from './Sobre'
 import Contato from './Contato'
 import Campanhas from './Campanhas'
+import Admin from './Admin'
+import Login from './Login'
 
 
 class App extends Component {
@@ -23,6 +25,8 @@ class App extends Component {
                 <Route path='/sobre' component={Sobre} />
                 <Route path='/contato' component={Contato} />
                 <Route path='/campanhas' component={Campanhas} />
+                <Route path='/admin' component={Admin} />
+                <Route path='/login' component={login}
                 <Footer />
             </div>    
         </Router>
