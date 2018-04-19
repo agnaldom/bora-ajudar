@@ -1,0 +1,9 @@
+version: "3"
+services:
+  boajudar:
+    build: .
+    container_name: borajuda
+    restart: always
+    ports:
+      - "3000:3000"
+
