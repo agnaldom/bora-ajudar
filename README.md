@@ -23,7 +23,14 @@ componete já renderizado e busca as mudanças. E como o Virtual DOM é leve, es
 
 [![Rocket.Chat logo](https://d207aa93qlcgug.cloudfront.net/1.95.5.qa/img/nav/docker-logo-loggedout.png)](https://hub.docker.com/r/rocketchat/rocket.chat/)
 
-´´´
+```
 $ docker-compose build
 $ docker-compose up -d
-´´´
+```
+
+## NPM or YARN
+
+```
+$ npm install # or yarn install
+$ npm start   # ou yanr start
+```
