@@ -19,6 +19,23 @@ componete já renderizado e busca as mudanças. E como o Virtual DOM é leve, es
 # Deployment
 
 ## Docker
+
+## Configurando Ambiente
+
+### a) Instalar o Docker:
+
+Referencia: [Documentacao oficial](https://docs.docker.com/install/#supported-platforms)
+
+Usuario Linux Debian/Ubunto
+
+
+
+### b) instalar o Docker Compose:
+
+Referencia: [Documentacao Oficial](https://docs.docker.com/compose/install/#install-compose)
+
+
+
 ### Deploy with docker compose
 
 [![Rocket.Chat logo](https://d207aa93qlcgug.cloudfront.net/1.95.5.qa/img/nav/docker-logo-loggedout.png)](https://hub.docker.com/r/rocketchat/rocket.chat/)
