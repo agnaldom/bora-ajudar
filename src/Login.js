@@ -4,12 +4,13 @@ import { Redirect } from 'react-router-dom'
 import { auth } from './base'
 
 class Login extends Component {
+
     constructor(props) {
         super(props)
 
         this.email = null
         this.passwd = null
-
+        
         this.state = {
             isLoggedIn: false,
             error: false,
@@ -27,7 +28,7 @@ class Login extends Component {
             .signInWithEmailAndPassword(this.email.value, this.passwd.value)
             .then((user) => {
                 this.setState({
-                    isLoggeIn: true
+                    isLoggedIn: true
                 })
             })
             .catch(error => {
@@ -36,6 +37,7 @@ class Login extends Component {
                     isLogging: false
                 })
             })
+        console.log('login', this.email.value, this.passwd.value)
     }
     render(){
         if (this.state.isLoggedIn) {

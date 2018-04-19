@@ -4,36 +4,36 @@ import base from './base'
 
 class Campanhas extends Component {
 	constructor(props) {
-		super(props)
-		this.state = {
-			campanhas: {}
-		}
+	   super(props)
+	   this.state = {
+	      campanhas: {}
+	   }
 	}
 	
 	componentDidMount() {
-		base.syncState('campanhas', {
-			context: this,
-			state: 'campanhas',
-			asArray: false
-		})
+	    base.syncState('campanhas', {
+	        context: this,
+		    state: 'campanhas',
+		    asArray: false
+	    })
 	}
 
 	renderCampanhas(campanhas){
-		return(
-			<section className='page-section'>
-				<div className='container'>
-					<div className='product-item bg-faded'>
-						<div className='product-item-title d-flex'>
-							<div className='p-5 d-flex mr-auto rounded'>
-								<h2 className='section-heading mb-0'>
-									<span className='section-heading-upper'>{campanhas.subTitulo}</span>
-									<span className='section-heading-lower'>{campanhas.nome}</span>
-								</h2>
-							</div>
-						</div>
-						<div className='product-item-description d-flex ml-auto'>
-							<div className='p-5 rounded'>
-								<p className='mb-0'>{campanhas.descricao}</p>
+	   return(
+	       <section className='page-section'>
+		    <div className='container'>
+		        <div className='product-item bg-faded'>
+			     <div className='product-item-title d-flex'>
+			          <div className='p-5 d-flex mr-auto rounded'>
+				      <h2 className='section-heading mb-0'>
+					  <span className='section-heading-upper'>{campanhas.subTitulo}</span>
+				          <span className='section-heading-lower'>{campanhas.nome}</span>
+				      </h2>
+		                  </div>
+			     </div>
+			     <div className='product-item-description d-flex ml-auto'>
+			          <div className='p-5 rounded'>
+				      <p className='mb-0'>{campanhas.descricao}</p>
 								{ campanhas.tipo === 'dinheiro' && <div>
 									<div className='progress'>
 										<div className='progress-bar bg-success' role='progressbar'  aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>
@@ -47,14 +47,14 @@ class Campanhas extends Component {
 									<h4>Como doar:</h4>
 									<p>{campanhas.comoDoar}</p>
 								</div>}
-							</div>
-						</div>
-						<div className='ml-auto'>			
-						</div>
-					</div>
-				</div>
-			</section>
-		)
+			          </div>
+			     </div>
+			     <div className='ml-auto'>			
+			     </div>
+		        </div>
+	           </div>
+	       </section>
+	    )
 	}
 	render(){
 		return(

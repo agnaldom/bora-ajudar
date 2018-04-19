@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 
 import { auth } from './base'
 
-const AdminHome = props => <p>Seja bem-vindo!</p>
+//const AdminHome = props => <h1>Seja bem-vindo!</h1>
 
 class Admin extends Component{
     constructor(props) {
@@ -16,24 +16,24 @@ class Admin extends Component{
     }
     componentDidMount(){
         auth.onAuthStateChanged(user => {
-            this.seState({
+            this.setState({
                 isAuthing: false,
                 isLoggedIn: !!user,
                 user: user
             })
         })
     }
-    render() {
+    render() { 
         if (this.state.isAuthing){
             return <p>Aguarde...</p>
-        }
+        }       
         if (!this.state.isLoggedIn) {
             return <Redirect to='/login' />
         }
         return(
             <div>
-                <h1>Painel Administrativo</h1>
-                {/*<Route path='/' component={AdminHome} />*/}
+                <h1>Admin{JSON.stringify(this.state)}</h1>
+                {/*<Route path='/' component={AdminHome} /> */}
             </div>
         )
     }
