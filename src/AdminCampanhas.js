@@ -11,6 +11,7 @@ class AdminCampanhas extends Component {
 
         this.renderCampanha = this.renderCampanha.bind(this)
         this.removeCampanha = this.removeCampanha.bind(this)
+        this.handleSave = this.handleSave.bind(this)
     }
      
     componentDidMount() {
@@ -30,6 +31,20 @@ class AdminCampanhas extends Component {
             campanha: newCampanhas
         })*/
     }
+    handleSave(){
+        const nome = this.nome.value
+        const descricao = this.descricao.value
+
+        base.push('campanhas', {
+            data: { nome, descricao },
+            then: err => { 
+                if(!err){
+                    this.nome.value = ''
+                    this.descricao.value = ''
+                }
+            }
+        })
+    }
     renderCampanha(key, campanha){
         return(
             <li key={key}>
@@ -44,6 +59,10 @@ class AdminCampanhas extends Component {
         return(
             <div>
                 <h1>Campanhas</h1>
+                <h2>Nova campanha</h2>
+                Campanha: <input type="text" ref={ref => this.nome = ref} /><br />
+                Descrição: <textarea ref={ref => this.descricao = ref}></textarea><br />
+                <button onClick={this.handleSave}>Salvar nova campanha</button>
                 <ul>
                     {
                         Object.keys(this.state.campanhas)
