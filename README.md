@@ -15,3 +15,8 @@ componente vivem, o que é mais conhecido como Virtual DOM.
 
 Assim, toda vez que um componente é renderizado, o React atualiza o virtual DOM de cada
 componete já renderizado e busca as mudanças. E como o Virtual DOM é leve, esse processo é muito rápido.
+
+## Como roda o projeto
+
+    - [NPM / Yarn](#Rodando-com-npm)
+    - [Docker](#Rodando-com-docker)
