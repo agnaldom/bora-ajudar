@@ -16,7 +16,10 @@ componente vivem, o que é mais conhecido como Virtual DOM.
 Assim, toda vez que um componente é renderizado, o React atualiza o virtual DOM de cada
 componete já renderizado e busca as mudanças. E como o Virtual DOM é leve, esse processo é muito rápido.
 
-## Como roda o projeto
+# Deployment
 
-    - [NPM / Yarn](#Rodando-com-npm)
-    - [Docker](#Rodando-com-docker)
+## Docker
+### Deploy with docker compose
+
+[![Rocket.Chat logo](https://d207aa93qlcgug.cloudfront.net/1.95.5.qa/img/nav/docker-logo-loggedout.png)](https://hub.docker.com/r/rocketchat/rocket.chat/)
+
